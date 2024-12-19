@@ -11,7 +11,7 @@ protected:
     bool nivel; // 0 cliente; 1 gerente; 
 public:
     User();
-    User(std::string nome, std::string email);               // Construtor
+    User(std::string nome, std::string email, std::string senha);               // Construtor
     void setName(std::string nome);
     std::string getName();
 };

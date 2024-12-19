@@ -4,9 +4,10 @@ User::User(){
     
 }
 
-User::User(std::string nome, std::string email){
+User::User(std::string nome, std::string email, std::string senha){
     this->nome = nome;
     this->nome = email;
+    this->senha = senha;
 }
 
 void User::setName(std::string nome){
