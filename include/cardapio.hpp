@@ -9,9 +9,7 @@ private:
     std::list<Prato> pratos;
 public:
     Cardapio();               // Construtor
-    void addPrato(Prato novoPrato){
-        pratos.push_back(novoPrato);
-    }
+    void addPrato(Prato novoPrato);
 
 };
 

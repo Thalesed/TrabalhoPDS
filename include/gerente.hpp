@@ -5,9 +5,7 @@
 
 class Gerente : public User{
 public:
-    Gerente(std::string nome){
-        this->nome = nome;
-    }              // Construtor
+    Gerente(std::string nome);
 
 };
 

@@ -10,7 +10,6 @@ private:
     double preco;
 public:
     Produto();               // Construtor
-
 };
 
 #endif // PRODUTO_H

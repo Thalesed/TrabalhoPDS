@@ -8,9 +8,7 @@ class Cliente : public User {
 private:
     Historico historico;
 public:
-    Cliente(std::string nome){
-        this->nome = nome;
-    }             // Construtor
+    Cliente(std::string nome);// Construtor
 
 };
 
