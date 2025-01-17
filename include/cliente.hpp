@@ -8,7 +8,7 @@ class Cliente : public User {
 private:
     Historico historico;
 public:
-    Cliente(std::string nome);// Construtor
+    Cliente();// Construtor
 
 };
 

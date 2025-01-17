@@ -2,5 +2,9 @@
 
 Historico::Historico(){
 
+}
+
+Historico::Historico(User user){
+    this->usuario = user;
     
 }

@@ -7,14 +7,27 @@
 
 #define SUCESSO 0 
 
-using namespace std;
-
 int main(){
-    cout << "Bem vindos ao nosso restaurante!!!";
+    std::cout << "Bem vindos ao nosso restaurante!!!";
 
     Cardapio* cardapio = new Cardapio();
 
+    int cmd;
+    std::string tmpNome, tmpEmail;
+    User usuario;
 
+    std::cout << "Você deseja: \n [0] Fazer login \n [1] Cadastrar-se \n >> ";
+    std::cin >> cmd;
+
+    if(cmd == 1){
+        std::cout << "Digite o seu nome: ";
+        std::cin >> tmpNome;
+        std::cout << "Digite o seu email: ";
+        std::cin >> tmpEmail;
+        usuario = User(tmpNome, tmpEmail);
+    }
+
+    
 
     //limpando a memoria
     delete cardapio;

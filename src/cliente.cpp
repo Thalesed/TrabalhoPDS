@@ -1,5 +1,5 @@
 #include "cliente.hpp"
 
-Cliente::Cliente(std::string nome){
-    this->nome = nome;
+Cliente::Cliente(){
+    this->nivel = 0;
 }

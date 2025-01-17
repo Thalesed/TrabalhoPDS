@@ -1,9 +1,14 @@
 #ifndef HISTORICO_H
 #define HISTORICO_H
 
+#include "user.hpp"
+
 class Historico {
+private :
+    User usuario;
 public:
-    Historico();               // Construtor
+    Historico();
+    Historico(User user);               // Construtor
 
 };
 

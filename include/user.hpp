@@ -6,9 +6,14 @@
 class User {
 protected:
     std::string nome;
+    std::string email;
+    std::string senha;
+    bool nivel; // 0 cliente; 1 gerente; 
 public:
-    User();               // Construtor
-
+    User();
+    User(std::string nome, std::string email);               // Construtor
+    void setName(std::string nome);
+    std::string getName();
 };
 
 #endif // USER_H

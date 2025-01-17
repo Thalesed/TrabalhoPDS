@@ -5,7 +5,7 @@
 
 class Gerente : public User{
 public:
-    Gerente(std::string nome);
+    Gerente();
 
 };
 

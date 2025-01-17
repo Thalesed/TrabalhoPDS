@@ -10,6 +10,11 @@ private:
     double preco;
 public:
     Produto();               // Construtor
+    std::string getName();
+    void setName(std::string nome);
+    float getPrice();
+    bool operator == (const Produto& p) const { return nome == p.nome; }
+    bool operator != (const Produto& p) const { return nome != p.nome; }
 };
 
 #endif // PRODUTO_H
