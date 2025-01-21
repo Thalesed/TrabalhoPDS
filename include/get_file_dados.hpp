@@ -15,7 +15,7 @@ class get_file_dados:public I_read_file
     std::string nome_arquivo;
 
     public:
-    get_file_dados(std::string nome_arquivo_in);
+    get_file_dados(std::string& nome_arquivo_in);
     void abrir_arquivo() override;
     void ler_arquivo() override;
     const std::map<std::string,std::list<std::string>>& transmitir_map() const;

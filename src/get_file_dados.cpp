@@ -4,7 +4,7 @@
 #include <iostream>
 #include <sstream>
 
-get_file_dados::get_file_dados(std::string nome_arquivo_in)
+get_file_dados::get_file_dados(std::string& nome_arquivo_in)
 {
     verificar_arquivo_error verificar_arquivo(nome_arquivo_in);
     nome_arquivo = nome_arquivo_in;
