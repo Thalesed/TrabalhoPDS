@@ -1,5 +1,5 @@
-#include "C:\Users\franc\OneDrive\Documentos\Codigos\trabalho_hpp\set_dados_file.hpp"
-#include "C:\Users\franc\OneDrive\Documentos\Codigos\trabalho_hpp\verificar_arquivo_error.hpp"
+#include "set_dados_file.hpp"
+#include "verificar_arquivo_error.hpp"
 
 #include <iostream>
 

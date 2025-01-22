@@ -1,5 +1,5 @@
-#include "C:\Users\franc\OneDrive\Documentos\Codigos\trabalho_hpp\set_map_file.hpp"
-#include "C:\Users\franc\OneDrive\Documentos\Codigos\trabalho_hpp\verificar_arquivo_error.hpp"
+#include "set_map_file.hpp"
+#include "verificar_arquivo_error.hpp"
 
 
 set_map_file::set_map_file(std::string& nome_arquivo_in)

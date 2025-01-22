@@ -1,5 +1,5 @@
-#include "C:\Users\franc\OneDrive\Documentos\Codigos\trabalho_hpp\read_dados_map.hpp"
-#include "C:\Users\franc\OneDrive\Documentos\Codigos\trabalho_hpp\get_file_dados.hpp"
+#include "read_dados_map.hpp"
+#include "get_file_dados.hpp"
 
 #include <iostream>
 

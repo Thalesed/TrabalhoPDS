@@ -1,6 +1,6 @@
-#include "C:\Users\franc\OneDrive\Documentos\Codigos\trabalho_hpp\modificar_dados_file.hpp"
-#include "C:\Users\franc\OneDrive\Documentos\Codigos\trabalho_hpp\get_file_dados.hpp"
-#include "C:\Users\franc\OneDrive\Documentos\Codigos\trabalho_hpp\set_map_file.hpp"
+#include "modificar_dados_file.hpp"
+#include "get_file_dados.hpp"
+#include "set_map_file.hpp"
 
 #include <iostream>
 #include <any>
