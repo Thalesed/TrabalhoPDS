@@ -31,3 +31,13 @@ set_map_file::~set_map_file()
     if(file_o_m.is_open())
         file_o_m.close();
 }
+
+/*  Essa função serve para você conseguir escrever um map no arquivo,ela recebe os dados modificados pelo usuario do map,
+quando a função escrever_arquivo é chamada o arquivo irá escrever os dados desse map no arquivo.
+    Exemplo: 
+
+        map file_o_m =              arquivos_pratos.csv =                               arquivos_pratos.csv =     
+
+        Sorvete,5.00,chocolate      Sanduiche,15.00,carne                               Sorvete,5.00,chocolate
+        Refrigerante,4.50,Pepsi ->  Sorvete,5.00,baunilha -> set_map_file(file_o_m) ->  Refrigerante,4.50,Pepsi
+        Hamburguer,15.00,carne      Refrigerante,4.50,Pepsi                             Hamburguer,15.00,carne */

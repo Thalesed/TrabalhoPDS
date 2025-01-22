@@ -50,3 +50,14 @@ get_file_dados::~get_file_dados()
     if(s_arquivo.is_open())
         s_arquivo.close();
 }
+
+/*  Essa função serve para você conseguir receber as informações do arquivo,ela recebe os dados dos arquivos por meio da leitura
+dos dados dos arquivos,que irá atribuir cada "tipo" de dado no arquivo em uma map,que poderá ser transmitida para outros lugares.
+    Depois esses dados da map irão ser transmitidos pela função transmitir_map()
+    Exemplo: 
+
+        arquivos_pratos.csv =                                                       transmitir_map() =     
+                                                                                Chave       Dados
+        Sanduiche,15.00,carne      get_file_dados("arquivos_pratos.csv")       (Sanduiche)(15.00,carne)
+        Sorvete,5.00,baunilha ->   abrir_arquivo()                         ->  (Sorvete)(5.00,baunilha)
+        Refrigerante,4.50,Pepsi    ler_arquivo()                               (Refrigerante)(4.50,Pepsi) */

@@ -68,3 +68,15 @@ void modificar_dados_file::modificar_arquivo(std::any& dado,const int& posicao,c
 }
 
 modificar_dados_file::~modificar_dados_file(){}
+
+/*  Essa função serve para você conseguir modificar alguma informação da do arquivo,ela recebe os dados dos arquivos por meio de uma map
+quando a função modificar_dados_file é chamada o arquivo irá procurar a string chave fornecida e irá modificar se for encontrada é importante 
+notar que existirá um valor int que irá determinar qual valor da chave do map será modificado,se esse valor for -1 a chave em sí será modificada
+    Depois esses dados da map irão ser escritos no arquivo por meio da classe set_map_file
+    Exemplo: 
+
+        arquivos_pratos.csv =                                                       arquivos_pratos.csv =     
+
+        Sanduiche,15.00,carne      modificar_dados_file("arquivos_pratos.csv")       Sorvete,5.00,chocolate
+        Sorvete,5.00,baunilha ->   modificar_arquivo("chocolate",1,Sorvete)      ->  Refrigerante,4.50,Pepsi
+        Refrigerante,4.50,Pepsi    modificar_arquivo("Hamburguer",-1,Sanduiche)      Hamburguer,15.00,carne */

@@ -44,3 +44,14 @@ set_dados_file::~set_dados_file()
     if(file_w_e.is_open())
         file_w_e.close();
 }
+
+/*  Essa função serve para você conseguir escrever uma list<std:;any> no arquivo,ela recebe os do usuario pela list,e ela irá "decompor" os
+tipos de dados presentes nelas,o dado sempre será escrito no fim do arquivo
+    Exemplo: 
+
+        list dado_a =                                                       arquivos_pratos.csv =     
+
+        Coxinha,3.00,frango  -> set_dados_file(arquivos_pratos.csv) ->      Sorvete,5.00,chocolate
+                                escrever_arquivo(dado_a)                    Refrigerante,4.50,Pepsi
+                                                                            Hamburguer,15.00,carne
+                                                                            Coxinha,3.00,frango */

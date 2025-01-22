@@ -33,3 +33,15 @@ const std::map<std::string,std::list<std::string>> get_dados_map::transmitir_dad
 }
 
 get_dados_map::~get_dados_map(){}
+
+
+/*  Essa função serve para você conseguir receber um dado especifico do arquivo csv,ela recebe os dados dos arquivos por meio de uma map
+quando a função get_dados é chamada o arquivo irá procurar a string chave fornecida e irá atribuir os dados da chave e dos dados dela para uma map
+    Essa map então poderá ser transmitida para tal classe por meio de transmitir_dados_parcial()  
+    Exemplo: 
+
+        arquivos_pratos.csv =                                                 transmitir_dados_parciais irá retornar =     
+
+        Sanduiche,15.00,carne      get_dados_map("arquivos_pratos.csv")       
+        Sorvete,5.00,baunilha ->   get_dados(Sorvete)                     ->  Refrigerante,4.50,Pepsi
+        Refrigerante,4.50,Pepsi */

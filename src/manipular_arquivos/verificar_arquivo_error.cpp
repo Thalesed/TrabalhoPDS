@@ -24,4 +24,6 @@ verificar_arquivo_error::verificar_arquivo_error(std::string& nome_arquivo)
 verificar_arquivo_error::~verificar_arquivo_error(){}
 
 
-/*main.cpp deletar_dados_file.cpp get_dados_map.cpp get_file_dados.cpp modificar_dados_file.cpp read_dados_map.cpp set_dados_file.cpp set_map_file.cpp verificar_arquivo_error.cpp*/
+/* Esse arquivo serva para verificar se um arquivo existe e consegue ser aberto antes que as linha de abertura de arquivos das outras classe
+sejam executadas,estou pensando em caso ocorra alguma falha o programa faça com que o usuario volte ao menu anterior a essa falha,porém ainda temos que ver
+como esse menu vai ser feito*/

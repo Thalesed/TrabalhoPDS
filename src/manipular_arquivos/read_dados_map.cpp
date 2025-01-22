@@ -48,6 +48,18 @@ void read_dados_map::ler_dados_parciais(std::string& chave_r,std::list<std::stri
         std::cout << "Valor nao encontrado,tente novamente";
 }
 
-read_dados_map::~read_dados_map()
-{
-}
+read_dados_map::~read_dados_map(){}
+
+/*  Essa função serve para você conseguir ler as informações do arquivo,ela recebe os dados dos arquivos por meio de uma map,depois ela poderá
+ler todos os dados do arquivo,ou só ler os conteudos de uma hash,nesse caso você terá que fornecer a chave para ler ela.
+    Depois esses dados da map irão ser transmitidos pela função transmitir_map()
+    Exemplo: 
+
+        arquivos_pratos.csv =                                                          
+                                                                                
+        Sanduiche,15.00,carne      read_dados_map("arquivos_pratos.csv")       prato:Sanduiche preço:15.00 ingredientes:carne
+        Sorvete,5.00,baunilha ->   ler_dados_completos(cabecalho)     ->       prato:Sorvete preço:5.00 ingredientes:baunilha
+        Refrigerante,4.50,Pepsi                                                prato:Refrigerante preço:4.50 ingredientes:Pepsi
+
+        string cabecalho=       -> ler_dados_parciais(Sanduiche,cabecalho) ->  prato:Sanduiche preço:15.00 ingredientes:carne
+        {prato,preço,ingredientes} */

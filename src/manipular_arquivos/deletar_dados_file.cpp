@@ -27,3 +27,14 @@ void deletar_dados_file::deletar_dados_arquivo(std::string& chave)
         std::cout << "Valor nao encontrado,tente novamente";
 }
 deletar_dados_file::~deletar_dados_file(){}
+
+/*  Essa função serve para você conseguir deletar alguma informação do arquivo,ela recebe os dados dos arquivos por meio de uma map
+quando a função deletar_dados_file é chamada o arquivo irá procurar a string chave fornecida e irá deletar ela se for encontrada
+    Depois esses dados da map irão ser escritos no arquivo por meio da classe set_map_file
+    Exemplo: 
+
+        arquivos_pratos.csv =                                                       arquivos_pratos.csv =     
+
+        Sanduiche,15.00,carne      deletar_dados_file("arquivos_pratos.csv")       Sanduiche,15.00,carne,
+        Sorvete,5.00,baunilha ->   deletar_dados_arquivo(Sorvete)              ->  Refrigerante,4.50,Pepsi
+        Refrigerante,4.50,Pepsi */
