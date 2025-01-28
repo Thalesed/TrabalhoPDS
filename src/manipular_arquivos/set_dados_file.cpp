@@ -11,12 +11,19 @@ set_dados_file::set_dados_file(std::string& nome_arquivo_in)
 
 void set_dados_file::abrir_arquivo()
 {
+    std::ifstream file_s;
+    file_s.open(nome_arquivo,std::ios::ate);
+    if(file_s.tellg() == 0)
+        vazio = true;
+    else
+        vazio = false;
+    file_s.close();
     file_w_e.open(nome_arquivo,std::ios::app);
 }
 
 void set_dados_file::escrever_arquivo(const std::list<std::any>& dado)
 {
-    if(file_w_e.tellp() != 0)
+    if(vazio == false)
         file_w_e << "\n";
     for(auto& out:dado)
     {

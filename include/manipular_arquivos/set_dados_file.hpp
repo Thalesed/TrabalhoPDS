@@ -13,6 +13,7 @@ class set_dados_file:public I_write_file
         std::ofstream file_w_e;
         std::list<std::string> dados_convertidos;
         std::string nome_arquivo;
+        bool vazio = false;
     public:
         set_dados_file(std::string& nome_arquivo_in);
         void abrir_arquivo() override;

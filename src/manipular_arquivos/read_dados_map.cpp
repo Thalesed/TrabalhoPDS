@@ -16,15 +16,17 @@ void read_dados_map::ler_dados_completos(std::list<std::string>& cabecalho)
     auto cabecalho_n = cabecalho.begin();
     for(auto& [chave,valores]:r_d_file)
     {
+        if(cabecalho_n == cabecalho.end())
+            cabecalho_n = cabecalho.begin();
         std::cout << *cabecalho_n << ":" << chave << "\n";
         ++cabecalho_n;
-        if(cabecalho_n == cabecalho.end()) 
-            cabecalho_n = cabecalho.begin();
         for(auto read_valores:valores)
         {
+            /*if(cabecalho_n == cabecalho.end())
+                cabecalho_n = cabecalho.begin();*/
             std::cout << *cabecalho_n << ":" << read_valores << "\n";
             ++cabecalho_n;
-            if(read_valores == valores.back()) 
+            if(read_valores == valores.back())
                 std::cout << "\n";
         }
     }
