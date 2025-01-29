@@ -5,6 +5,7 @@
 #include <iostream>
 #include <string>
 #include <map>
+#include <memory>
 
 class login:public I_login
 {
@@ -16,7 +17,7 @@ class login:public I_login
     public:
     login();
     void verificar_usuario() override;
-    void registrar_acesso() override;
+    void registrar_acesso(std::shared_ptr<usuario_log>&) override;
     ~login();
 };
 

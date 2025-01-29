@@ -12,8 +12,8 @@ protected:
     std::string tipo;
 
 public:
-    Usuario(int id, const std::string& nome, const std::string& email, const std::string& senha, const std::string& tipo)
-        : id(id), nome(nome), email(email), senha(senha), tipo(tipo) {}
+    Usuario(const std::string& nome, const std::string& senha, int id, const std::string& email, const std::string& tipo)
+        : nome(nome),senha(senha), id(id), email(email), tipo(tipo) {}
 
     virtual ~Usuario() = default;
 

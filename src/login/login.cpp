@@ -63,6 +63,7 @@ void login::verificar_usuario()
                     {
                         std::cout << "Por favor,insira o nome de usuario:\n";
                         std::cin >> nome;
+                        dados_user[nome];
                         break;
                     }
                     case 2:
@@ -106,6 +107,7 @@ void login::verificar_usuario()
                     {
                         std::cout << "Por favor insira sua senha:\n";
                         std::cin >> senha;
+                        dados_user[nome] = senha;
                         break;
                     }
                     case 2:
@@ -121,14 +123,14 @@ void login::verificar_usuario()
     }
 }
 
-void login::registrar_acesso()
+void login::registrar_acesso(std::shared_ptr<usuario_log>& ptr_1)
 {
     auto dt = dados_user.find(nome);
     if(dt->first == nome && dt->second == senha)
     {
         std::string nome_reg = dt->first;
-        usuario_log reg_acesso;
-        reg_acesso.set_user_log(nome_reg);
+        //usuario_log reg_acesso;
+       ptr_1->set_user_log(nome_reg);
     }
 }
 

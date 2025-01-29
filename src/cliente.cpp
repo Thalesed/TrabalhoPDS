@@ -1,5 +1,5 @@
 #include "cliente.hpp"
 
-Cliente::Cliente(){
+/*Cliente::Cliente(){
     this->nivel = 0;
-}
+}*/

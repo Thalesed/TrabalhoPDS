@@ -17,6 +17,7 @@ class usuario_log:public I_usuario_log
     void set_user_log(std::string& user_data) override;
     void get_user_log_atual() override;
     void get_user_log_historico() override;
+    std::string transmitir_user();
     ~usuario_log();
 };
 

@@ -8,15 +8,15 @@
 
 class Cliente : public Usuario {
 public:
-    Cliente(int id, const std::string& nome, const std::string& email, const std::string& senha)
-        : Usuario(id, nome, email, senha, "cliente") {}
+    Cliente(const std::string& nome,const std::string& senha, int id, const std::string& email,const std::string& tipo)
+        : Usuario(nome,senha, id, email, "cliente") {}
 
     void visualizar_cardapio(const Cardapio& cardapio) const {
-        cardapio.mostrar_pratos();
+        //cardapio.mostrar_pratos();
     }
 
     void fazer_pedido(Pedido& pedido) const {
-        pedido.processar();
+        //pedido.processar();
         std::cout << "Pedido realizado com sucesso pelo cliente " << nome << "!" << std::endl;
     }
 };

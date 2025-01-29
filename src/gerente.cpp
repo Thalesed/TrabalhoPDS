@@ -1,5 +1,5 @@
 #include "gerente.hpp"
 
-Gerente::Gerente(){
+/*Gerente::Gerente(){
         this->nivel = 1;
-}              
+}*/       

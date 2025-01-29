@@ -16,7 +16,7 @@ class modificar_dados_file:public I_modificar_file
         std::map<std::string,std::list<std::string>> r_data;
     public:
         modificar_dados_file(std::string& nome_arquivo_in);
-        void modificar_arquivo(std::any& dado,const int& posicao,const std::string& chave) override;
+        void modificar_arquivo(std::string& dado,const int& posicao,const std::string& chave) override;
         ~modificar_dados_file();
 };
 

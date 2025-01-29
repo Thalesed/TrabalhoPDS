@@ -1,4 +1,4 @@
-#include "usuario_log.hpp"
+#include "include\login\usuario_log.hpp"
 #include "set_dados_file.hpp"
 #include "read_dados_map.hpp"
 
@@ -28,6 +28,11 @@ void usuario_log::set_user_log(std::string& user_data)
 void usuario_log::get_user_log_atual()
 {
     std::cout << "O usuario logado agora e:" << user_nome <<"\n";
+}
+
+std::string usuario_log::transmitir_user()
+{
+    return user_nome;
 }
 
 void usuario_log::get_user_log_historico()
