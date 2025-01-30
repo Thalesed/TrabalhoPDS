@@ -1,8 +1,8 @@
-#include "include\menu\menu_usuarios.hpp"
-#include "include\set\set_usuario.hpp"
-#include "include\get\get_valor.hpp"
-#include "include\modificar\mod_valor.hpp"
-#include "include\delete\del_valor.hpp"
+#include "menu_usuarios_g.hpp"
+#include "set_usuario.hpp"
+#include "get_valor.hpp"
+#include "mod_valor.hpp"
+#include "del_valor.hpp"
 #include <iostream>
 #include <memory>
 #include <limits>
@@ -16,18 +16,19 @@ void menu_usuarios::criar_menu()
     {
         std::cout << "Você deseja: \n[1] Criar Usuarios \n[2] Ver Usuarios Registrados \n[3] Modificar Usuarios \n[4] Deletar Usuarios \n";
         std::cout << "[5] Voltar ao Menu anterior \n";
-        std::cin >> coef;
+        std::cin >> coef_1;
         if (std::cin.fail()) // Se o voce inserir um valor errado no cin essa funcao ira "limpar" ele e retornara o valor 0
         {
             std::cin.clear();//Por isso nunca atribua no switch case uma funcao chamada pelo valor 0
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            coef_1 = 0;
         }
-        switch(coef)
+        switch(coef_1)
         {
             case 1:
             {
-                std::unique_ptr<set_usuario> ptr_1 = std::make_unique<set_usuario>(nome_arquivo);
-                ptr_1->set_valor();
+                std::unique_ptr<set_usuario> ptr_1 = std::make_unique<set_usuario>();
+                ptr_1->set_valor(nome_arquivo);
                 ptr_1.reset();
                 break;
             }
@@ -62,7 +63,7 @@ void menu_usuarios::criar_menu()
             default:
                 std::cout << "Numero invalido, tente novamente:\n";
         }
-    } while(coef != 5);
+    } while(coef_1 != 5);
 }
 
 menu_usuarios::~menu_usuarios(){}

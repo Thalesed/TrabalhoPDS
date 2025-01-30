@@ -1,6 +1,6 @@
-#include "include\login\login.hpp"
-#include "include\login\usuario_log.hpp"
-#include "include\manipular_arquivos\get_file_dados.hpp"
+#include "login.hpp"
+#include "usuario_log.hpp"
+#include "get_file_dados.hpp"
 #include <limits>
 
 login::login(){}

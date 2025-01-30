@@ -1,5 +1,5 @@
-#include "include\modificar\mod_valor.hpp"
-#include "include\manipular_arquivos\modificar_dados_file.hpp"
+#include "mod_valor.hpp"
+#include "modificar_dados_file.hpp"
 #include <iostream>
 #include <memory>
 #include <limits>

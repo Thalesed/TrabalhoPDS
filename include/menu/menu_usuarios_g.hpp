@@ -7,7 +7,7 @@
 class menu_usuarios:public I_menu
 {
     private:
-    int coef = 0;
+    int coef_1 = 0;
     std::string nome_arquivo = {"C:/Users/franc/OneDrive/Documentos/Codigos/Trabalho_git/Arquivos_de_dados/usuarios.csv"};
     public:
     menu_usuarios();

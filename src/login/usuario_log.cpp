@@ -1,4 +1,4 @@
-#include "include\login\usuario_log.hpp"
+#include "usuario_log.hpp"
 #include "set_dados_file.hpp"
 #include "read_dados_map.hpp"
 
@@ -24,6 +24,7 @@ void usuario_log::set_user_log(std::string& user_data)
 
     set_acesso.abrir_arquivo();
     set_acesso.escrever_arquivo(dados_acesso_out);
+    dados_acesso_out.clear();
 }
 void usuario_log::get_user_log_atual()
 {

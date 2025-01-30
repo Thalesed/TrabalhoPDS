@@ -1,5 +1,7 @@
-#include "include\menu\menu_gerente.hpp"
-#include "include\menu\menu_usuarios.hpp"
+#include "menu_gerente.hpp"
+#include "menu_usuarios_g.hpp"
+#include "menu_acesso.hpp"
+#include "historico.hpp"
 #include <iostream>
 #include <limits>
 #include <memory>
@@ -18,6 +20,7 @@ void menu_gerente::criar_menu()
         {
             std::cin.clear();//Por isso nunca atribua no switch case uma funcao chamada pelo valor 0
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            coef = 0;
         }
         switch(coef)
         {
@@ -37,11 +40,24 @@ void menu_gerente::criar_menu()
             case 5:
                 std::cout << "a";
             case 6:
-                std::cout << "a";
+            {
+                std::unique_ptr<historico> ptr_6 = std::make_unique<historico>();
+                ptr_6->criar_hist();
+                ptr_6.reset();
+            }
             case 7:
-                std::cout << "a";
+            {
+                std::unique_ptr<menu_acesso> ptr_7 = std::make_unique<menu_acesso>();
+                ptr_7->transferir_ptr(ptr_re);
+                ptr_7->criar_menu();
+                ptr_7.reset();
+                break;
+            }
             case 8:
+            {
+                ptr_re.reset();
                 return;
+            }
             case 9:
             {
                 terminar = true;
@@ -51,6 +67,11 @@ void menu_gerente::criar_menu()
 				std::cout << "Numero invalido, tente novamente:\n";
         }
     } while(coef < 8 || coef > 9);
+}
+
+void menu_gerente::armazenar_ptr(std::shared_ptr<usuario_log>& ptr_r)
+{
+    ptr_re = ptr_r;
 }
 
 bool menu_gerente::terminar_programa()

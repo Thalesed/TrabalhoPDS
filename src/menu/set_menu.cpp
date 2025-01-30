@@ -1,6 +1,6 @@
-#include "include\menu\set_menu.hpp"
-#include "include\manipular_arquivos\get_dados_map.hpp"
-#include "string"
+#include "set_menu.hpp"
+#include "get_dados_map.hpp"
+#include <string>
 
 set_menu::set_menu(){}
 

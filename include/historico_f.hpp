@@ -1,5 +1,5 @@
-#ifndef HISTORICO_H
-#define HISTORICO_H
+#ifndef HISTORICO_F_HPP
+#define HISTORICO_F_HPP
 
 #include "user.hpp"
 
@@ -12,4 +12,4 @@ public:
 
 };
 
-#endif // HISTORICO_H
+#endif // HISTORICO_F_HPP

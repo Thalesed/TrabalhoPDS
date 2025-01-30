@@ -7,9 +7,9 @@
 #include "include/pedido.hpp"
 #include "include/cardapio.hpp"
 #include "include/login/login.hpp"
-#include "C:\Users\franc\OneDrive\Documentos\Codigos\Trabalho_git\include\login\usuario_log.hpp"
-#include "C:\Users\franc\OneDrive\Documentos\Codigos\Trabalho_git\include\menu\set_menu.hpp"
-#include "C:\Users\franc\OneDrive\Documentos\Codigos\Trabalho_git\include\menu\menu_gerente.hpp"
+#include "include\login\usuario_log.hpp"
+#include "include\menu\set_menu.hpp"
+#include "include\menu\menu_gerente.hpp"
 
 #define SUCESSO 0 
 #define LINE "\n----------------------------\n"
@@ -58,15 +58,11 @@ int main(){
 		} while (cmd != 1);
 		std::shared_ptr<set_menu>ptr_2 = std::make_shared<set_menu>();
 		std::string priv = ptr_2->transmitir_priv(ptr_1);
-		/*std::string usuario_logado = ptr_1->transmitir_user();
-		std::shared_ptr<get_dados_map>ptr_2 = std::make_shared<get_dados_map>("Arquivos_de_dados/usuarios.csv");
-		ptr_2->get_dados(usuario_logado);
-		std::map<std::string,std::list<std::string>> user_map_log = ptr_2->transmitir_dados_parciais();
-		std::string user_priv = user_map_log[usuario_logado].back();*/
-		
+				
 		if(priv == "gerente")
 		{
 			std::shared_ptr<menu_gerente> ptr_3 = std::make_shared<menu_gerente>();
+			ptr_3->armazenar_ptr(ptr_1);
 			ptr_3->criar_menu();
 			sair = ptr_3->terminar_programa();
 			ptr_2.reset();

@@ -1,5 +1,5 @@
-#include "include\delete\del_valor.hpp"
-#include "include\manipular_arquivos\deletar_dados_file.hpp"
+#include "del_valor.hpp"
+#include "deletar_dados_file.hpp"
 #include <iostream>
 #include <memory>
 

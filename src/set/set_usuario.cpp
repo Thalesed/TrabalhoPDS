@@ -1,6 +1,6 @@
-#include "include\set\set_usuario.hpp"
-#include "include\manipular_arquivos\get_file_dados.hpp"
-#include "include\manipular_arquivos\set_dados_file.hpp"
+#include "set_usuario.hpp"
+#include "get_file_dados.hpp"
+#include "set_dados_file.hpp"
 #include <iostream>
 #include <map>
 #include <limits>
@@ -8,12 +8,9 @@
 #include <any>
 #include <memory>
 
-set_usuario::set_usuario(std::string& nome_arquivo_in)
-{
-    nome_arquivo = nome_arquivo_in;
-}
+set_usuario::set_usuario(){}
 
-void set_usuario::set_valor()
+void set_usuario::set_valor(std::string nome_arquivo)
 {
     get_file_dados verificar(nome_arquivo);
     verificar.abrir_arquivo();
@@ -81,6 +78,7 @@ void set_usuario::set_valor()
     set_dados_file escrever(nome_arquivo);
     escrever.abrir_arquivo();
     escrever.escrever_arquivo(dados_out);
+    dados_out.clear();
 }
 
 set_usuario::~set_usuario(){}
