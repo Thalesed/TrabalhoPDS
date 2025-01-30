@@ -1,6 +1,10 @@
 #include "menu_gerente.hpp"
 #include "menu_usuarios_g.hpp"
 #include "menu_acesso.hpp"
+#include "menu_armazem_g.hpp"
+#include "menu_pratos.hpp"
+#include "menu_pedidos_g.hpp"
+#include "read_dados_map.hpp"
 #include "historico.hpp"
 #include <iostream>
 #include <limits>
@@ -12,7 +16,7 @@ void menu_gerente::criar_menu()
 {
     do
     {
-    	std::cout << "Você deseja: \n[1] Modificar Usuarios \n[2] Modificar Pratos \n[3] Modificar Armazem \n[4] Exibir Cardapio \n";
+    	std::cout << "Voce deseja: \n[1] Modificar Usuarios \n[2] Modificar Pratos \n[3] Modificar Armazem \n[4] Exibir Cardapio \n";
         std::cout << "[5] Modificar Pedidos \n[6] Criar Historico \n[7] Verificar Acessos ao programa \n[8] Deslogar \n";
         std::cout << "[9] Acabar com a execucao do programa\n";
         std::cin >> coef;
@@ -32,18 +36,30 @@ void menu_gerente::criar_menu()
                 break;
             }
             case 2:
-                std::cout << "a";
+            {
+                std::unique_ptr<menu_pratos_g> ptr_2 = std::make_unique<menu_pratos_g>();
+                ptr_2->criar_menu();
+                ptr_2.reset();
+                break;
+            }
             case 3:
-                std::cout << "a";
+            {
+                break;
+            }
             case 4:
-                std::cout << "a";
+            {
+                break;
+            }
             case 5:
-                std::cout << "a";
+            {
+                break;
+            }
             case 6:
             {
                 std::unique_ptr<historico> ptr_6 = std::make_unique<historico>();
                 ptr_6->criar_hist();
                 ptr_6.reset();
+                break;
             }
             case 7:
             {
