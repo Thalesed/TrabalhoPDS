@@ -44,6 +44,9 @@ void menu_gerente::criar_menu()
             }
             case 3:
             {
+                std::unique_ptr<menu_armazem_g> ptr_3 = std::make_unique<menu_armazem_g>();
+                ptr_3->criar_menu();
+                ptr_3.reset();
                 break;
             }
             case 4:
