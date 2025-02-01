@@ -5,6 +5,7 @@
 #include <iostream>
 #include <any>
 #include <list>
+#include <memory>
 
 modificar_dados_file::modificar_dados_file(std::string& nome_arquivo_in)
 {
@@ -15,6 +16,20 @@ modificar_dados_file::modificar_dados_file(std::string& nome_arquivo_in)
     r_data = ler_arquivo_1.transmitir_map();
 }
 
+bool modificar_dados_file::procurar_key(std::string& dado_1)
+{
+    //bool chave_existente = false;
+    for(auto checar = r_data.begin();checar != r_data.end();checar++)
+    {
+        if(checar->first == dado_1)
+        {
+            std::cout << "Chave de hash ja existente,escolha outra\n";
+            return true;
+        }
+    }
+    return false;
+}
+
 void modificar_dados_file::modificar_arquivo(std::string& dado,const int& posicao,const std::string& chave)
 {
     auto temp = r_data.find(chave);
@@ -22,19 +37,10 @@ void modificar_dados_file::modificar_arquivo(std::string& dado,const int& posica
     {
         if(posicao == -1)
         {
-            bool chave_existente = false;
-            for(auto checar = r_data.begin();checar != r_data.end();checar++)
-            {
-                if(checar->first == std::any_cast<std::string>(dado))
-                {
-                    std::cout << "Chave de hash ja existente,escolha outra\n";
-                    chave_existente = true;
-                    break;
-                }
-            }
+            bool chave_existente = procurar_key(dado);
             if(chave_existente == false)
             {
-                r_data[std::any_cast<std::string>(dado)] = temp->second;
+                r_data[dado] = temp->second;
                 r_data.erase(temp);
                 set_map_file map(nome_arquivo);
                 map.abrir_arquivo();
@@ -46,17 +52,7 @@ void modificar_dados_file::modificar_arquivo(std::string& dado,const int& posica
             auto checar_lista = temp->second.begin();
             std::advance(checar_lista, posicao);
             if(checar_lista != temp->second.end())
-            {
                 *checar_lista = dado;
-                /*if(dado.type() == typeid(int))
-                    *checar_lista = std::any_cast<int>(dado);
-                else if(dado.type() == typeid(float))
-                    *checar_lista = std::any_cast<float>(dado);
-                else if(dado.type() == typeid(std::string))
-                    *checar_lista = std::any_cast<std::string>(dado);
-                else if(posicao >= 0)
-                    *checar_lista = "Erro";*/
-            }
             else
                 std::cout << "Valor nao encontrado,tente novamente\n";
         }

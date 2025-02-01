@@ -17,7 +17,7 @@ void mod_valor::mod_val()
     std::cout << "Qual sera o valor da chave (ou seja do primeiro valor (nome do prato,usuario...) do dado)\n";
     std::cin >> chave;
 
-    std::cout << "Qual a posicao do valor que voce quer modificar(0 para a primeira,1 para a segunda...) digite -1 se voce quiser mudar o valor da chave\n";
+    std::cout << "Qual e a posicao:\n";
     std::cin >> posicao;
     do
     {    
@@ -34,11 +34,6 @@ void mod_valor::mod_val()
     std::cin >> dado;
 
     ptr_1->modificar_arquivo(dado,posicao,chave);
-
-    /*do
-    {
-        std << 
-    } while()*/
 }
 
 mod_valor::~mod_valor(){}

@@ -23,6 +23,7 @@ void set_dados_file::abrir_arquivo()
 
 void set_dados_file::escrever_arquivo(const std::list<std::any>& dado)
 {
+    file_w_e.seekp(0,std::ios::end);
     if(vazio == false)
         file_w_e << "\n";
     for(auto& out:dado)

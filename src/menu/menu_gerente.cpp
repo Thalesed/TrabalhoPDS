@@ -6,9 +6,8 @@
 #include "menu_pedidos_g.hpp"
 #include "read_dados_map.hpp"
 #include "historico.hpp"
+#include "cin_reset.hpp"
 #include <iostream>
-#include <limits>
-#include <memory>
 
 menu_gerente::menu_gerente(){}
 
@@ -22,54 +21,55 @@ void menu_gerente::criar_menu()
         std::cin >> coef;
         if (std::cin.fail()) // Se o voce inserir um valor errado no cin essa funcao ira "limpar" ele e retornara o valor 0
         {
-            std::cin.clear();//Por isso nunca atribua no switch case uma funcao chamada pelo valor 0
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-            coef = 0;
+            cin_r reset;
+            reset.cin_reset();
         }
         switch(coef)
         {
             case 1:
             {
-                std::unique_ptr<menu_usuarios> ptr_1 = std::make_unique<menu_usuarios>();
-                ptr_1->criar_menu();
-                ptr_1.reset();
+                menu_usuarios menu_u;
+                menu_u.criar_menu();
                 break;
             }
             case 2:
             {
-                std::unique_ptr<menu_pratos_g> ptr_2 = std::make_unique<menu_pratos_g>();
-                ptr_2->criar_menu();
-                ptr_2.reset();
+                menu_pratos_g menu_p;
+                menu_p.criar_menu();
                 break;
             }
             case 3:
             {
-                std::unique_ptr<menu_armazem_g> ptr_3 = std::make_unique<menu_armazem_g>();
-                ptr_3->criar_menu();
-                ptr_3.reset();
+                menu_armazem_g menu_a;
+                menu_a.criar_menu();
                 break;
             }
             case 4:
             {
+                std::string arquivo_cardapio = {"Arquivos_de_dados/pratos.csv"};
+                std::list<std::string> cabecalho = {"Prato","Preco"};
+                read_dados_map exibir(arquivo_cardapio);
+                std::cout << "Os produtos do cardapio sao:\n";
+                exibir.ler_dados_completos(cabecalho);
                 break;
             }
             case 5:
             {
+                menu_pedidos_g menu_p;
+                menu_p.criar_menu();
                 break;
             }
             case 6:
             {
-                std::unique_ptr<historico> ptr_6 = std::make_unique<historico>();
-                ptr_6->criar_hist();
-                ptr_6.reset();
+                historico hist;
+                hist.criar_hist();
                 break;
             }
             case 7:
             {
-                std::unique_ptr<menu_acesso> ptr_7 = std::make_unique<menu_acesso>();
-                ptr_7->transferir_ptr(ptr_re);
-                ptr_7->criar_menu();
-                ptr_7.reset();
+                menu_acesso menu_a;
+                menu_a.transferir_ptr(ptr_re);
+                menu_a.criar_menu();
                 break;
             }
             case 8:

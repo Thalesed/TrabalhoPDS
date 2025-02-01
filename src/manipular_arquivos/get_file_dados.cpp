@@ -38,6 +38,8 @@ void get_file_dados::ler_arquivo()
             }
         }
     }
+    if(s_arquivo.is_open())
+        s_arquivo.close();
 }
 
 const std::map<std::string,std::list<std::string>>& get_file_dados::transmitir_map() const

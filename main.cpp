@@ -1,21 +1,14 @@
-#include <iostream>
-#include <string>
-#include <limits>
-#include <memory>
-#include "include/cliente.hpp"
-#include "include/gerente.hpp"
-#include "include/pedido.hpp"
-#include "include/cardapio.hpp"
-#include "include/login/login.hpp"
-#include "include\login\usuario_log.hpp"
-#include "include\menu\set_menu.hpp"
-#include "include\menu\menu_gerente.hpp"
-
+#include "menu_inicial.hpp"
 #define SUCESSO 0 
 #define LINE "\n----------------------------\n"
 
 int main(){
-    std::cout << "Bem vindos ao nosso restaurante!!!";
+
+	menu_inicial menu_i;
+	menu_i.criar_menu();
+
+    return SUCESSO;
+    /*std::cout << "Bem vindos ao nosso restaurante!!!";
 
     Cardapio* cardapio = new Cardapio();
 	//usuario_log usuario_seccao;
@@ -29,7 +22,7 @@ int main(){
 	{
 		do
 		{
-			std::cout << LINE << "Você deseja: \n [1] Fazer login \n [2] Cadastro de Cliente \n >> " << LINE;
+			std::cout << LINE << "Voce deseja: \n [1] Fazer login \n [2] Cadastro de Cliente \n >> " << LINE;
 			std::cin >> cmd;
 			if (std::cin.fail()) // Se o voce inserir um valor errado no cin essa funcao ira "limpar" ele e retornara o valor 0
 			{
@@ -47,6 +40,9 @@ int main(){
 				}
 				case 2:
 				{
+					std::string arquivo = {"Arquivos_de_dados/usuarios.csv"};
+					set_cliente reg_cliente;
+					reg_cliente.set_valor(arquivo);
 					break;
 				}
 				default:
@@ -68,11 +64,19 @@ int main(){
 			ptr_2.reset();
 		}
 		else if(priv == "funcionario")
-			std::cout << "a";
+		{
+			std::shared_ptr<menu_funcionario> ptr_4 = std::make_shared<menu_funcionario>();
+			ptr_4->criar_menu();
+			ptr_4.reset();
+		}
 		else if(priv == "cliente")
-			std::cout << "a";
+		{
+			std::shared_ptr<menu_cliente> ptr_5 = std::make_shared<menu_cliente>();
+			ptr_5->criar_menu();
+			ptr_5.reset();
+		}
 		else
-			std::cout << "a";
+			std::cout << "Ocorreu um erro grave na sua definicao de usuario,chame um especialista para resolver-lo\n";
 	} while(sair == false);
 	
 
@@ -106,5 +110,4 @@ int main(){
     //limpando a memoria
     //delete cardapio;
 
-    return SUCESSO;
 }

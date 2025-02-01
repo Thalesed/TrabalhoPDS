@@ -15,6 +15,8 @@ void set_map_file::abrir_arquivo()
 
 void set_map_file::set_m_file(std::map<std::string,std::list<std::string>> o_m_data)
 {
+    auto ultima_key = --o_m_data.end();
+    file_o_m.seekp(0);
     for(auto& temp:o_m_data)
     {
         file_o_m << temp.first << ",";
@@ -22,8 +24,11 @@ void set_map_file::set_m_file(std::map<std::string,std::list<std::string>> o_m_d
         {
             file_o_m << vector_valores << ",";
         }
-        file_o_m << "\n";
+        if(&temp != &*ultima_key)
+            file_o_m << "\n";
     }
+    if(file_o_m.is_open())
+        file_o_m.close();
 }
 
 set_map_file::~set_map_file()

@@ -1,5 +1,5 @@
-#include <memory>
 #include "login.hpp"
+#include <memory>
 
 class set_menu
 {

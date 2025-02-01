@@ -5,7 +5,6 @@
 #include <fstream>
 #include <list>
 #include <map>
-#include <any>
 
 class modificar_dados_file:public I_modificar_file
 {
@@ -17,6 +16,7 @@ class modificar_dados_file:public I_modificar_file
     public:
         modificar_dados_file(std::string& nome_arquivo_in);
         void modificar_arquivo(std::string& dado,const int& posicao,const std::string& chave) override;
+        bool procurar_key(std::string&);
         ~modificar_dados_file();
 };
 

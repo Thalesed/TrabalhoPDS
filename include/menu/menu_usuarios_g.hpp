@@ -8,7 +8,7 @@ class menu_usuarios:public I_menu
 {
     private:
     int coef_1 = 0;
-    std::string nome_arquivo = {"C:/Users/franc/OneDrive/Documentos/Codigos/Trabalho_git/Arquivos_de_dados/usuarios.csv"};
+    std::string nome_arquivo = {"Arquivos_de_dados/usuarios.csv"};
     public:
     menu_usuarios();
     void criar_menu() override;

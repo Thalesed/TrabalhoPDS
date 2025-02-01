@@ -16,8 +16,6 @@ verificar_arquivo_error::verificar_arquivo_error(std::string& nome_arquivo)
     catch(const std::runtime_error& e)
     {
         std::cout << e.what();
-        //Aqui deve ter uma função que permite com que o programa retorne para o menu de acesso anterior
-        //ja que esse menu ainda não foi feito o programa apenas será encerrado
         exit(1);
     }
 }
