@@ -22,8 +22,5 @@ comp_o: $(SRCS)
 clean:
 	rm -f $(SRCS_O) bistrosystem.exe
 
-# Recompilar tudo
-re: fclean all
-
 # Definir regras especiais
 .PHONY: all clean fclean re

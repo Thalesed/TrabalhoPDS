@@ -26,7 +26,7 @@ std::string set_pedido::get_hora()
     auto tempo_atual = std::chrono::system_clock::now();
     auto tempo_conv = std::chrono::system_clock::to_time_t(tempo_atual);
     std::string tempo_string = ctime(&tempo_conv);
-    tempo_string = tempo_string.substr(0,19);
+    tempo_string = tempo_string.substr(11,8);
     return tempo_string;
 }
 

@@ -35,14 +35,11 @@ void set_cliente::set_valor(std::string nome_arquivo)
     std::cin >> senha;
     std::cout << "Informe o seu email\n";
     std::cin >> email;
-    std::cout << "Informe a sua identificacao do usuario\n";
-    std::cin >> id;
     priv = "cliente";
 
     std::list<std::any> dados_out;
     dados_out.push_back(nome); // Pro programa funcionar a posicao do nome sempre tem que ser a primeira
     dados_out.push_back(senha);
-    dados_out.push_back(id);
     dados_out.push_back(email);
     dados_out.push_back(priv); // Pro programa funcionar a posicao do estado de privilegio sempre tem que ser a ultima
     

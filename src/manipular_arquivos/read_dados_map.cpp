@@ -47,7 +47,7 @@ void read_dados_map::ler_dados_parciais(std::string& chave_r,std::list<std::stri
         }
     }
     else
-        std::cout << "Valor nao encontrado,tente novamente";
+        std::cout << "Valor nao encontrado,tente novamente\n";
 }
 
 read_dados_map::~read_dados_map(){}
