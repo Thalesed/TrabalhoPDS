@@ -20,9 +20,7 @@ void del_pedido::del_val()
         std::cout << "[3] Voltar \n";
         std::cout << "O arquivo selecionado e: " << arquivo << "\n";
         std::cin >> coef;
-        std::cout << "Qual o valor do id:\n";
-        std::cin >> id;
-
+        
         if(std::cin.fail())
         {
             cin_r reset;
