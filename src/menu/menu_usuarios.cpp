@@ -31,7 +31,7 @@ void menu_usuarios::criar_menu()
             }
             case 2:
             {
-                std::list<std::string> cabecalho = {"Usuario:","Senha:","Id:","Email:","Privilegio:"};
+                std::list<std::string> cabecalho = {"Usuario:","Senha:","Email:","Privilegio:"};
                 get_valor g_u(nome_arquivo,cabecalho);
                 std::cout << "Os Usuarios Registrados sao:\n\n";
                 g_u.get_val();
