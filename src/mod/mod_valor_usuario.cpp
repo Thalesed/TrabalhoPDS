@@ -28,7 +28,7 @@ void mod_valor_usuario::mod_val()
             std::cout << "Valor invalido,insira outro\n";
             std::cin >> posicao;
         }
-        if(posicao == 4)
+        if(posicao == 2)
         {
             int coef = 0;
             do

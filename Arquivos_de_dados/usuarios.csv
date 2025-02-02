@@ -1,3 +1,4 @@
-admin,senha,1,admin@gmail.com,gerente,
-func,teste,0,teste@gmail.com,funcionario,
-marcos,teste,1,teste@hotmail.com,cliente,
+Fernando,teste,fernando@gmail.com,funcionario,
+admin,admin,admin@gmail.com,gerente,
+marcos,teste,marcos@gmail.com,cliente,
+teste,teste,teste@gmail.com,cliente,

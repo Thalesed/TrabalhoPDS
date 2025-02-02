@@ -40,7 +40,7 @@ void menu_usuarios::criar_menu()
             case 3:
             {
                 mod_valor_usuario m_u(nome_arquivo);
-                std::cout << "Posicao: [-1] Nome [0] Senha [1] Id [2] email [3] privilegio [4]\n";
+                std::cout << "Posicao: [-1] Nome [0] Senha [1] Email [2] Privilegio\n";
                 m_u.mod_val();
                 break;
             }
