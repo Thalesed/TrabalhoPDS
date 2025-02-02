@@ -63,9 +63,11 @@ void mod_valor_usuario::mod_val()
             } while(coef < 1 || coef > 3);
         }
     } while(std::cin.fail());
-
-    std::cout << "Qual e o dado que voce quer inserir\n";
-    std::cin >> dado;
+    if(posicao != 2)
+    {
+        std::cout << "Qual e o dado que voce quer inserir\n";
+        std::cin >> dado;
+    }
 
     ptr_1->modificar_arquivo(dado,posicao,chave);
 
