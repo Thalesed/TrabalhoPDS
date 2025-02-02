@@ -85,6 +85,7 @@ I_menu <|-- menu_usuarios
 I_menu <|-- menu_acesso
 I_menu <|-- menu_inicial
 
+main.cpp o-- menu_inicial
 menu_gerente o-- menu_usuarios
 menu_gerente o-- menu_pratos_g
 menu_gerente o-- menu_armazem_g
